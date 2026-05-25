@@ -1,0 +1,28 @@
+# --------------------------------------------------------
+# CONFIGURACIÓN DE MAKO (NOTIFICACIONES)
+# --------------------------------------------------------
+
+font=JetBrainsMono Nerd Font 10
+background-color=#11121aef
+text-color=#c0caf5
+border-size=2
+border-color=#00ff99ee
+border-radius=10
+
+# Barra de progreso (para cuando subes volumen o brillo)
+progress-color=#00ff99ff
+
+# Posición en la pantalla (Esquina superior derecha)
+anchor=top-right
+
+# Márgenes y dimensiones
+margin=20
+padding=15
+width=300
+height=110
+
+# Duración por defecto (5 segundos)
+default-timeout=5000
+
+# Capa sobre la que se dibuja (arriba de todo)
+layer=top

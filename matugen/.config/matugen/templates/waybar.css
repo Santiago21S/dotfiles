@@ -1,0 +1,2 @@
+@define-color accent #{{colors.primary.default.hex_stripped}};
+@define-color bg_dinamico #{{colors.surface.default.hex_stripped}};
