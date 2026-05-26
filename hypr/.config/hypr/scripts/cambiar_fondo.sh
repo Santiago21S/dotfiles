@@ -20,12 +20,15 @@ fi
 # Ruta completa del archivo seleccionado
 SELECTED_WALLPAPER="$WALLPAPER_DIR/$CHOICE"
 
+# Crear o actualizar un enlace simbólico fijo para que Hyprlock lo use siempre
+ln -sf "$SELECTED_WALLPAPER" "$HOME/.config/hypr/actual_wallpaper.png"
+
 awww img "$SELECTED_WALLPAPER" \
   --transition-type "wipe" \
   --transition-fps 60 \
   --transition-duration 1.0
 
-# 2. Ejecutar Matugen de forma automática sin preguntar por colores en la terminal
+# Ejecutar Matugen de forma automática sin preguntar por colores en la terminal
 matugen image "$SELECTED_WALLPAPER" --prefer saturation
 
 # Forzar a Waybar a apagar y encender con los nuevos estilos aplicados
@@ -34,9 +37,8 @@ sleep 0.1
 waybar &
 disown
 
-# -> AÑADE ESTA LÍNEA AQUÍ:
 # Avisar a todas las instancias abiertas de Neovim que recarguen el tema en caliente
 pkill -USR1 nvim 2>/dev/null || true
 
-# 3. Notificación estética
+# Notificación estética
 notify-send -u low -i "$SELECTED_WALLPAPER" "Tema Actualizado" "Paleta generada a partir de $CHOICE"

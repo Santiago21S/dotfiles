@@ -1,0 +1,246 @@
+{
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "top",
+  "spacing": 8,
+  "height": 24,
+
+  "margin-top": 6,
+  "margin-left": 12,
+  "margin-right": 12,
+
+  "modules-left": [
+    "custom/arch",
+    "hyprland/workspaces",
+    "mpris"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "group/ctl",   
+    "group/stats",
+    "custom/power" // <-- Nuevo botón de apagado a la extrema derecha
+  ],
+
+  // ======================
+  // HYPRLAND
+  // ======================
+
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "1": "<span size='13500'>󰬺</span>",
+      "2": "<span size='13500'>󰬻</span>",
+      "3": "<span size='13500'>󰬼</span>",
+      "4": "<span size='13500'>󰬽</span>",
+      "5": "<span size='13500'>󰬾</span>",
+      "6": "<span size='13500'>󰬿</span>",
+      "7": "<span size='13500'>󰭀</span>",
+      "8": "<span size='13500'>󰭁</span>",
+      "9": "<span size='13500'>󰭂</span>",
+      "10": "<span size='13500'>󰿩</span>"
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+
+  // ======================
+  // CORE MODULES
+  // ======================
+
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "format-alt": "{:%e %B %A}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+  "cpu": {
+    "interval": 2,
+    "format": "{icon} {usage}%",
+    "format-icons": ["󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+    "on-click": "kitty -e btop"
+  },
+
+  "memory": {
+    "interval": 2,
+    "format": "{icon} {percentage}%",
+    "format-icons": ["󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+    "on-click": "kitty -e btop"
+  },
+
+  "network": {
+    "interval": 3,
+    "spacing": 1,
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰌘",
+    "format-disconnected": "󰤮",
+    "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "kitty -e nmtui"
+  },
+
+  "battery": {
+    "interval": 5,
+    "format": "{capacity}% {icon}",
+    "format-discharging": "{icon}",
+    "format-charging": "{icon}",
+    "format-plugged": "",
+    "format-full": "󰂅",
+    "format-icons": {
+      "charging": ["󰢜","󰂆","󰂇","󰂈","󰢝","󰂉","󰢞","󰂊","󰂋","󰂅"],
+      "default": ["󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"]
+    },
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
+  },
+
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "",
+    "format-no-controller": "",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "kitty -e bluetoothctl"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["","",""]
+    },
+    "scroll-step": 5,
+    "tooltip-format": "Playing at {volume}%",
+    "on-click": "swayosd-client --output-volume raise",
+    "on-click-right": "swayosd-client --output-volume mute-toggle",
+    "on-scroll-up": "swayosd-client --output-volume raise",
+    "on-scroll-down": "swayosd-client --output-volume lower"
+  },
+
+  "mpris": {
+    "interval": 10,
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon} {artist} {title}",
+    "scroll-step": 5,
+    "smooth-scrolling-threshold": 1,
+    "tooltip": true,
+    "tooltip-format": "{status_icon} {dynamic}",
+    "on-click": "playerctl previous",
+    "on-click-middle": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "player-icons": {
+      "chromium": "",
+      "firefox": "",
+      "spotify": "󰎆",
+      "mpv": "󰐹",
+      "default": ""
+    },
+    "status-icons": {
+      "playing": "",
+      "paused": "",
+      "stopped": ""
+    },
+    "dynamic-order": ["artist","title"],
+    "ignored-players": ["firefox"],
+    "max-length": 30
+  },
+
+// ======================
+  // GROUPS
+  // ======================
+
+  "group/stats": {
+    "id": "capsula-stats", // <-- Agregamos esta ID única
+    "orientation": "horizontal",
+    "modules": [
+      "cpu",
+      "memory",
+      "battery"
+    ]
+  },
+
+  "group/misc-expander": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/expand-icon",
+      "custom/update",
+      "power-profiles-daemon",
+      "tray"
+    ],
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "misc-group-item"
+    }
+  },
+
+  "group/ctl": {
+    "id": "capsula-ctl", // <-- Agregamos esta ID única
+    "orientation": "horizontal",
+    "modules": [
+      "group/misc-expander",
+      "network",
+      "bluetooth",
+      "pulseaudio"
+    ]
+  },
+
+  // ======================
+  // CUSTOM MODULES
+  // ======================
+
+  "custom/arch": {
+    "format": "󰣇",
+    "on-click": "rofi -show drun"
+  },
+
+  "custom/update": {
+    "format": " ",
+    "exec": "checkupdates | wc -l",
+    "on-click": "kitty -e yay -Syu",
+    "interval": 3600
+  },
+
+  "custom/expand-icon": {
+    "format": "",
+    "tooltip": false
+  },
+
+  "tray": {
+    "icon-size": 13,
+    "spacing": 5
+  },
+
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip": true,
+    "tooltip-format": "Profile: {profile}",
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": false,
+    "on-click": "wlogout" // Cambia "wlogout" por tu script/menú de apagado si usas otro
+  }
+}
