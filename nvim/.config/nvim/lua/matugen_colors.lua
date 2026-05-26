@@ -1,7 +1,7 @@
 -- Archivo de colores autogenerado por Matugen
 local M = {}
 
-M.accent = "#8bd0ef"
-M.bg = "#0f1417"
+M.accent = "#bfc2ff"
+M.bg = "#131318"
 
 return M

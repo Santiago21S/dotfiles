@@ -20,3 +20,9 @@ setopt HIST_REDUCE_BLANKS
 # Guardar los comandos en el archivo inmediatamente después de ejecutarlos
 # (Así, si abres otra pestaña de Kitty, compartirá el historial al instante)
 setopt SHARE_HISTORY
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/santiago/.local/bin:$PATH"
+export PATH="/home/santiago/.local/bin:$PATH"
+export PATH="/home/santiago/.local/bin:$PATH"

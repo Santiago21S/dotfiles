@@ -1,0 +1,65 @@
+# Theme: Matugen Dynamic Color Scheme
+# Generated automatically by Matugen
+
+# Main background, empty for terminal default, black for pitch black
+theme[main_bg]="#131318"
+
+# Main text color
+theme[main_fg]="#e4e1e9"
+
+# Title text color
+theme[title]="#bfc2ff"
+
+# Highlight bg color for menus
+theme[hi_fg]="#bfc2ff"
+
+# Background color for selected item in menus
+theme[selected_bg]="#46464f"
+
+# Foreground color for selected item in menus
+theme[selected_fg]="#c7c5d0"
+
+# Text color for inactive/disabled text
+theme[inactive_fg]="#918f9a"
+
+# Text color for source indicators
+theme[graph_text]="#e4e1e9"
+
+# Color for available mem graphite box
+theme[meter_bg]="#35343a"
+
+# Background color for load bars
+theme[proc_misc]="#bfc2ff"
+
+# CPU, Memory, Network graphs and progress bars (Gradient from Low to High)
+theme[cpu_box]="#bfc2ff"
+theme[mem_box]="#c5c4dd"
+theme[net_box]="#e8b9d4"
+theme[proc_box]="#bfc2ff"
+
+theme[div_line]="#918f9a"
+
+# Temperature gradient (Matugen Primary -> Error/Urgent)
+theme[temp_start]="#bfc2ff"
+theme[temp_mid]="#e8b9d4"
+theme[temp_end]="#ffb4ab"
+
+# CPU graph gradients
+theme[cpu_start]="#bfc2ff"
+theme[cpu_mid]="#3e4178"
+theme[cpu_end]="#c5c4dd"
+
+# Memory graph gradients
+theme[mem_start]="#c5c4dd"
+theme[mem_mid]="#454559"
+theme[mem_end]="#e8b9d4"
+
+# Network graph gradients
+theme[net_start]="#e8b9d4"
+theme[net_mid]="#5f3c52"
+theme[net_end]="#bfc2ff"
+
+# Process graph gradients
+theme[proc_start]="#bfc2ff"
+theme[proc_mid]="#c5c4dd"
+theme[proc_end]="#e8b9d4"
