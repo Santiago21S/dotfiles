@@ -2,64 +2,64 @@
 # Generated automatically by Matugen
 
 # Main background, empty for terminal default, black for pitch black
-theme[main_bg]="#131318"
+theme[main_bg]="#111418"
 
 # Main text color
-theme[main_fg]="#e4e1e9"
+theme[main_fg]="#e1e2e8"
 
 # Title text color
-theme[title]="#bfc2ff"
+theme[title]="#a3c9fe"
 
 # Highlight bg color for menus
-theme[hi_fg]="#bfc2ff"
+theme[hi_fg]="#a3c9fe"
 
 # Background color for selected item in menus
-theme[selected_bg]="#46464f"
+theme[selected_bg]="#43474e"
 
 # Foreground color for selected item in menus
-theme[selected_fg]="#c7c5d0"
+theme[selected_fg]="#c3c6cf"
 
 # Text color for inactive/disabled text
-theme[inactive_fg]="#918f9a"
+theme[inactive_fg]="#8d9199"
 
 # Text color for source indicators
-theme[graph_text]="#e4e1e9"
+theme[graph_text]="#e1e2e8"
 
 # Color for available mem graphite box
-theme[meter_bg]="#35343a"
+theme[meter_bg]="#32353a"
 
 # Background color for load bars
-theme[proc_misc]="#bfc2ff"
+theme[proc_misc]="#a3c9fe"
 
 # CPU, Memory, Network graphs and progress bars (Gradient from Low to High)
-theme[cpu_box]="#bfc2ff"
-theme[mem_box]="#c5c4dd"
-theme[net_box]="#e8b9d4"
-theme[proc_box]="#bfc2ff"
+theme[cpu_box]="#a3c9fe"
+theme[mem_box]="#bcc7db"
+theme[net_box]="#d9bde3"
+theme[proc_box]="#a3c9fe"
 
-theme[div_line]="#918f9a"
+theme[div_line]="#8d9199"
 
 # Temperature gradient (Matugen Primary -> Error/Urgent)
-theme[temp_start]="#bfc2ff"
-theme[temp_mid]="#e8b9d4"
+theme[temp_start]="#a3c9fe"
+theme[temp_mid]="#d9bde3"
 theme[temp_end]="#ffb4ab"
 
 # CPU graph gradients
-theme[cpu_start]="#bfc2ff"
-theme[cpu_mid]="#3e4178"
-theme[cpu_end]="#c5c4dd"
+theme[cpu_start]="#a3c9fe"
+theme[cpu_mid]="#1f4876"
+theme[cpu_end]="#bcc7db"
 
 # Memory graph gradients
-theme[mem_start]="#c5c4dd"
-theme[mem_mid]="#454559"
-theme[mem_end]="#e8b9d4"
+theme[mem_start]="#bcc7db"
+theme[mem_mid]="#3c4758"
+theme[mem_end]="#d9bde3"
 
 # Network graph gradients
-theme[net_start]="#e8b9d4"
-theme[net_mid]="#5f3c52"
-theme[net_end]="#bfc2ff"
+theme[net_start]="#d9bde3"
+theme[net_mid]="#543f5e"
+theme[net_end]="#a3c9fe"
 
 # Process graph gradients
-theme[proc_start]="#bfc2ff"
-theme[proc_mid]="#c5c4dd"
-theme[proc_end]="#e8b9d4"
+theme[proc_start]="#a3c9fe"
+theme[proc_mid]="#bcc7db"
+theme[proc_end]="#d9bde3"
