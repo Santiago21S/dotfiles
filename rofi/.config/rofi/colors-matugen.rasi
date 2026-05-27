@@ -1,6 +1,6 @@
 * {
-    bg-dinamico: #35343a; /* Color oscuro sólido garantizado por Matugen */
-    accent:      #bfc2ff;
-    text:        #e4e1e9;              /* Texto claro que contrasta perfectamente */
+    bg-dinamico: #32353a; /* Color oscuro sólido garantizado por Matugen */
+    accent:      #a3c9fe;
+    text:        #e1e2e8;              /* Texto claro que contrasta perfectamente */
     urgent:      #ffb4ab;
 }
