@@ -1,6 +1,0 @@
-* {
-    bg-dinamico: {{colors.surface_container_highest.default.hex}}; /* Color oscuro sólido garantizado por Matugen */
-    accent:      {{colors.primary.default.hex}};
-    text:        {{colors.on_surface.default.hex}};              /* Texto claro que contrasta perfectamente */
-    urgent:      {{colors.error.default.hex}};
-}

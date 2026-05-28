@@ -206,7 +206,7 @@
 
   "custom/arch": {
     "format": "󰣇",
-    "on-click": "rofi -show drun"
+    "on-click": "wofi --show drun"
   },
 
   "custom/update": {
