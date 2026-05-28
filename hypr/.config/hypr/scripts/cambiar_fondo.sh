@@ -9,13 +9,18 @@ if [ ! -d "$WALLPAPER_DIR" ]; then
   exit 1
 fi
 
-# Buscar todas las imágenes y pasárselas a Rofi para elegir una visualmente
-CHOICE=$(ls "$WALLPAPER_DIR" | grep -E '\.(jpg|jpeg|png|webp)$' | rofi -dmenu -p "󰸉 Selecciona Wallpaper")
+# 1. Construimos el formato especial de Wofi y le pedimos imágenes grandes (ej. 150px)
+CHOICE_RAW=$(ls "$WALLPAPER_DIR" | grep -E '\.(jpg|jpeg|png|webp)$' | while read -r img; do
+  echo "img:$WALLPAPER_DIR/$img:text:$img"
+done | wofi --show dmenu -i -p "󰸉 Selecciona Wallpaper" --image-size=150)
 
-# Si el usuario cierra el menú sin elegir nada, salimos en paz
-if [ -z "$CHOICE" ]; then
+# 2. Si el usuario cierra el menú sin elegir nada, salimos en paz
+if [ -z "$CHOICE_RAW" ]; then
   exit 0
 fi
+
+# 3. Limpiamos la cadena (ej: "img:/ruta/foto.jpg:text:foto.jpg") para extraer solo el nombre final
+CHOICE=$(echo "$CHOICE_RAW" | awk -F'text:' '{print $2}')
 
 # Ruta completa del archivo seleccionado
 SELECTED_WALLPAPER="$WALLPAPER_DIR/$CHOICE"

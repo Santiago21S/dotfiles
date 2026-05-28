@@ -19,9 +19,9 @@ output_path = '~/.config/nvim/lua/matugen_colors.lua'
 input_path = '~/.config/matugen/templates/kitty.conf'
 output_path = '~/.config/kitty/colors-matugen.conf'
 
-[templates.rofi]
-input_path = '~/.config/matugen/templates/rofi.rasi'
-output_path = '~/.config/rofi/colors-matugen.rasi'
+[templates.wofi]
+input_path = '~/.config/matugen/templates/wofi.css'
+output_path = '~/.config/wofi/colors-matugen.css'
 
 [templates.hyprlock]
 input_path = '~/.config/matugen/templates/hyprlock.conf'
